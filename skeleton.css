@@ -1,0 +1,224 @@
+* { /*reset all the values so the top bar doesn't have gap with top of the screen*/
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.top { /*for the whole blue bar at the top of the page*/
+    position: fixed;
+    top:0;
+    margin-left: auto; 
+    margin-right: auto;
+    width: 100%;  
+    height: 40px;
+    background-color: #3AA7DE;
+}
+
+.navbar{ /*for the navigation bar with web logo*/
+        position: fixed;
+        height: 100px;
+        width: 100%;
+        top: 40px;
+        padding-left: 30px;
+        padding-top: 10px;
+        left: 0;
+        background: #fff;
+        -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+}
+
+.navigation a{ /*for navigation bar home,addition etc*/
+    float: right;
+    margin-right: 50px;
+    margin-top: -25px;
+    font-family: "Nunito", "Open Sans", "Sans-Serif";
+    font-size: 20px;
+    text-decoration: none;
+    color: #88979F;
+    padding-right: 40px;
+}
+
+.top-login{ /*blue bar text settings*/
+    margin-top: 10px;
+    margin-right: 30px;
+    font-family: "Open Sans", "Sans-Serif";
+    font-size: 13px;
+    float: right;
+    color: white;
+}
+
+
+.homepic { /*for the picture on homepage*/
+    float:left;
+    margin-top: 140px;
+    text-align: center;
+    color: white;
+}
+
+.signup { /*signup box setting*/
+    float: right;
+    padding-left: 30px;
+    color: #576E7A;
+    margin-top: 90px;
+    font-family: "Raleway";
+    font-size: 18px;
+}
+
+e{ /*for the sentence before sign up space*/
+    font-family: "Open sans";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input.signup-button { /*for sign up button*/
+    color:#fff; 
+    font: "Open Sans"; 
+    background-color: #3AA7DE; 
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: bold;
+    border-radius:12px;
+}
+
+input.signup-space:focus { /*highlight input box when clicking*/
+    border: 3px solid #555;
+}
+
+input.login-button{ /*change login button style*/
+    color:#fff; 
+    font: "Open Sans"; 
+    background-color: #3AA7DE; 
+    border: 1px solid;
+    border-color: #333;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-weight: bold;
+} 
+
+input[type="text"], input[type="password"], textarea { /*change the login box to white*/
+    background-color : #fff;
+}
+
+.login-name { /*setting for the name on blue bar after logging in*/
+    margin-left: 80%;
+    padding-top: 0.8%;
+    color: white;
+    font-family: open sans;
+    font-size: 13px;
+    z-index: 999;
+}
+
+.questions{ /*setting for the questions*/
+    background-color : white;
+    color: #576E7A;
+    font-family : Times new roman;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left:1%;
+    font-size:18pt;
+	
+}
+
+ input.start-button { /*design for start button before questions*/
+    background-color: #DE9400;
+    border: none;
+    text-decoration: none;
+    color: white;
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size:22pt;
+    margin-top: 10%;
+    font-family: Raleway;
+    z-index: 999;
+}
+
+input.submit { /*design for submit buttonn after answering all questions*/
+    margin-left: 40%;
+    margin-bottom: 2%;
+    background-color: #DE9400;
+    border: none;
+    text-decoration: none;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size:22pt;
+    font-family: Raleway;
+    z-index: 999;
+}
+
+.content{ /*design for the page before questions*/ 
+    background-color : white;
+    width: 80%;
+    height: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 500%;
+    color: #576E7A;
+    margin-top : 10%;
+    font-family : Times new roman;
+    z-index: 999;
+}
+
+.content-question{ /*design for the question page*/
+    background-color : white;
+    width: 80%;
+    height: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    color: #576E7A;
+    margin-top : 10%;
+    font-family : Times new roman;
+    z-index: 999;
+}
+
+.content-congratulations{ /*design for the save progress page*/
+    background-color : white;
+    width: 80%;
+    height: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 300%;
+    color: #576E7A;
+    margin-top : 10%;
+    font-family : Times new roman;
+    z-index: 999;
+}
+
+input.check { /*save progress button*/
+    background-color: #DE9400;
+    border: none;
+    text-decoration: none;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size:22pt;
+    font-family: Raleway;
+    z-index: 999;
+}

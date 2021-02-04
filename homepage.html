@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>Homepage</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Open+Sans|Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet"  type="text/css" href="skeleton.css" >
+        
+    </head>
+    
+    <body>
+        <div class="top">
+            <div class="top-login">
+                <form action="login.php" method="post">
+                    Email
+                    <input type="text" name="email">&nbsp;&nbsp;
+                    Password
+                    <input type="password" name="pwd">&nbsp;&nbsp;
+                    <input class="login-button" type="submit" value="Log In">
+                </form>
+            </div>  
+        </div>
+        <div class="navbar">
+            <img src="logo3.jpg" height=90 alt="little genius">
+            <p class="navigation">
+                <a href="homepage.html">Home</a>&nbsp;&nbsp;&nbsp; 
+                <a href="addition.html">Addition</a>&nbsp;&nbsp;&nbsp;
+                <a href="subtract.html">Subtraction</a>&nbsp;&nbsp;&nbsp;
+                <a href="multiply.html">Multiplication</a>&nbsp;&nbsp;&nbsp;
+                <a href="division.html">Division</a>&nbsp;&nbsp;&nbsp;
+            </p>
+        </div>
+        <div class="homepic">
+            <img src="homepage.jpg" width=900 height=500>
+            <div class="signup">
+                <e>Sign up now to keep track of your progress</e><br><br>
+                <form action="signup.php" method="post">
+                    Email <br>
+                    <input class ="signup-space" type="text" name="email"><br><br>
+                    Username <br>
+                    <input class ="signup-space" type="text" name="username" maxlength="15" size="20"><br><br>
+                    Password <br>
+                    <input class ="signup-space" type="password" name="pwd" maxlength="20" size="20"><br><br><br>
+                    <input class ="signup-button" type="submit" value="Sign Up">       
+                </form>
+            </div>   
+        </div>
+    </body>
+</html>

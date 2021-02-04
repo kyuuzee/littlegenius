@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>Save progress multiplication</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Open+Sans|Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet"  type="text/css" href="skeleton.css" >
+        
+    </head>
+    
+    <body>
+        <div class="top">
+            <div class="login-name">
+                &nbsp;&nbsp;&nbsp;
+                <?php echo $_COOKIE["username"]; ?> 
+                &nbsp;&nbsp;&nbsp;
+                <input class="login-button" type= "button" value= "Log Out" onClick="window.location = 'logout.php'">
+            </div>
+        </div>
+        <div class="navbar">
+            <img src="logo3.jpg" height=90 alt="little genius">
+            <p class="navigation">
+                <a href="account.html">My Profile</a>&nbsp;&nbsp;&nbsp; 
+                <a href="addition.html">Addition</a>&nbsp;&nbsp;&nbsp;
+                <a href="subtract.html">Subtraction</a>&nbsp;&nbsp;&nbsp;
+                <a href="multiply.html">Multiplication</a>&nbsp;&nbsp;&nbsp;
+                <a href="division.html">Division</a>&nbsp;&nbsp;&nbsp;
+            </p>
+        </div>
+        <hr>
+		<div class="content-congratulations">
+			Congratulations you have completed multiplication. 
+			<br>
+			<br>
+			<form method=post action=progress-mul.php>
+				<input class="check" type=submit value="Save and Check Progress">
+			</form>
+		</div>
+    </body>
+</html>

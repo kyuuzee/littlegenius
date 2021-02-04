@@ -1,0 +1,168 @@
+<!--if cookie is not set go to default page-->
+<?php
+    if(!isset($_COOKIE['username']))
+         header('Location: multiplyq.html');?>
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>Multiply questions for logged in user</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Open+Sans|Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet"  type="text/css" href="skeleton.css" >
+        
+		<script type="text/javascript">
+
+		function check(){
+				Question=document.Question;
+				checkanswer1=Question.answer1.value;
+				checkanswer2=Question.answer2.value;
+				checkanswer3=Question.answer3.value;
+				checkanswer4=Question.answer4.value;
+				checkanswer5=Question.answer5.value;
+				if (checkanswer1 == "12"){
+					document.getElementById("question1").style.backgroundColor = "lightgreen";
+					checkanswer1 = true;}
+				else {
+					document.getElementById("question1").style.backgroundColor = "crimson";
+					document.getElementById("question1").style.color = "black";
+					checkanswer1 = false;}
+				if (checkanswer2 == "24"){
+					document.getElementById("question2").style.backgroundColor = "lightgreen";
+					checkanswer2 = true;}
+				else {
+					document.getElementById("question2").style.backgroundColor = "crimson";
+					document.getElementById("question2").style.color = "black";
+					checkanswer2 = false;}
+				if (checkanswer3 == "54"){
+					document.getElementById("question3").style.backgroundColor = "lightgreen";
+					checkanswer3 = true;}
+				else {
+					document.getElementById("question3").style.backgroundColor = "crimson";
+					document.getElementById("question3").style.color = "black";
+					checkanswer3 = false;}
+				if (checkanswer4 == "100"){
+					document.getElementById("question4").style.backgroundColor = "lightgreen";
+					checkanswer4 = true;}
+				else {
+					document.getElementById("question4").style.backgroundColor = "crimson";
+					document.getElementById("question4").style.color = "black";
+					checkanswer4 = false;}
+				if (checkanswer5 == "144"){
+					document.getElementById("question5").style.backgroundColor = "lightgreen";
+					checkanswer5 = true;}
+				else {
+					document.getElementById("question5").style.backgroundColor = "crimson";
+					document.getElementById("question5").style.color = "black";
+					checkanswer5 = false;}
+				if (checkanswer1 && checkanswer2 && checkanswer3 && checkanswer4 && checkanswer5 == true){
+					alert("Congratulations you have got all questions correct!!!!!!")
+					window.open("progress-mul.html");}
+				else {
+					alert("There are still some wrong answers. Don't give up!")}
+				
+				
+		}
+    </script>
+              
+    </head>
+    
+    <body>
+        <div class="top">
+            <div class="login-name">
+                &nbsp;&nbsp;&nbsp;
+                <?php echo $_COOKIE["username"]; ?> 
+                &nbsp;&nbsp;&nbsp;
+                <input class="login-button" type= "button" value= "Log Out" onClick="window.location = 'logout.php'">
+            </div> 
+        </div>
+        <div class="navbar">
+            <img src="logo3.jpg" height=90 alt="little genius">
+            <p class="navigation">
+                <a href="account.html">My Profile</a>&nbsp;&nbsp;&nbsp; 
+                <a href="addition.html">Addition</a>&nbsp;&nbsp;&nbsp;
+                <a href="subtract.html">Subtraction</a>&nbsp;&nbsp;&nbsp;
+                <a href="multiply.html">Multiplication</a>&nbsp;&nbsp;&nbsp;
+                <a href="division.html">Division</a>&nbsp;&nbsp;&nbsp;
+            </p>
+        </div>
+        <hr>
+		<div class="content-question">
+			<p style = "font-size:25pt; font-family: Raleway;">Before we start, let's watch a quick video to understand multiplication.</p>
+			<br>
+			<iframe width="560" height="315" 
+			src="https://www.youtube.com/embed/BZ41Fh2MEVw" frameborder="0" allow="accelerometer; autoplay; 
+			encrypted-media; gyroscope; 
+			picture-in-picture" 
+			allowfullscreen>
+			</iframe>
+			<p style = "font-size:20pt; font-family: Raleway;color: #576E7A;padding-top: 2%; padding-bottom: 2%">&nbsp;&nbsp; Once you finish the video, let's try some simple questions.</p>
+		</div>
+		<hr>
+		<form name="Question">
+			<div class="questions" id="question1">
+				<p>Question 1</p>
+				<br>
+				<p style = "font-size:15pt;">Zack has a stack of 4 coins. His dad gave him 2 more stacks of 4 coins. How many coins does he have now.</p>
+				<br>
+				<p style = "font-size:25pt;"> 4 coins x 3 stacks = ? </p>
+				<br>			
+				<p style = "font-size:15pt; font-style:italic; font-weight:light;"> Hint: <img src="coins.jpg" height=100 alt="coins"> <img src="coins.jpg" height=100 alt="coins"> <img src="coins.jpg" height=100 alt="coins"> </p>
+				<br>
+				<input type = "radio" name = "answer1" value = "4">4&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer1" value = "12">12&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer1" value = "3">3&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer1" value = "7">7<br>
+			</div>
+			<div class="questions" id="question2">
+				<p>Question 2</p>
+				<br>
+				<p style = "font-size:15pt;">Zack now has 3 stacks of 4 coins. His mum gave him another 3 more stacks of 4 coins. How many coins does he have now.</p>
+				<br>
+				<p style = "font-size:25pt;"> 4 coins x 6 stacks = ? </p>
+				<br>	
+				<input type = "radio" name = "answer2" value = "12">12&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer2" value = "6">6&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer2" value = "24">24&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer2" value = "4">4<br>
+			</div>
+			<div class="questions" id="question3">
+				<p>Question 3</p>
+				<br>
+				<p style = "font-size:25pt;">9 x 6 = ?</p>
+				<br>			
+				<input type = "radio" name = "answer3" value = "54">54&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer3" value = "9">9&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer3" value = "6">6&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer3" value = "45">45
+				<br>
+				<br>
+				<p style = "font-size:15pt; font-style:italic; font-weight:light;">Hint: If you are having troubles just imagine the stack of coins.</p>
+			</div>
+			<div class="questions" id="question4">
+				<p>Question 4</p>
+				<br>
+				<p style = "font-size:25pt;">10 x 10 = ?</p>
+				<br>			
+				<input type = "radio" name = "answer4" value = "100">100&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer4" value = "10">10&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer4" value = "4">4&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer4" value = "0">0
+				<br>
+			</div>
+			<div class="questions" id="question5">
+				<p>Question 5</p>
+				<br>
+				<p style = "font-size:25pt;">12 x 12 = ?</p>
+				<br>			
+				<input type = "radio" name = "answer5" value = "12">12&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer5" value = "2">2&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer5" value = "14">14&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer5" value = "144">144
+			</div>
+			<input class="submit" type = "button" name="submit" value="Submit" onclick="check()">
+		</form>
+    </body>
+</html>

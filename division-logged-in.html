@@ -1,0 +1,45 @@
+<!--if cookie is not set go to default page-->
+<?php
+    if(!isset($_COOKIE['username']))
+         header('Location: division.html');?>
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title> Division for logged in user </title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Open+Sans|Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet"  type="text/css" href="skeleton.css" >
+        
+    </head>
+    
+    <body>
+        <div class="top">
+            <div class="login-name">
+                &nbsp;&nbsp;&nbsp;
+                <?php echo $_COOKIE["username"]; ?> 
+                &nbsp;&nbsp;&nbsp;
+                <input class="login-button" type= "button" value= "Log Out" onClick="window.location = 'logout.php'">
+            </div> 
+        </div>
+        <div class="navbar">
+            <img src="logo3.jpg" height=90 alt="little genius">
+            <p class="navigation">
+                <a href="account.html">My Profile</a>&nbsp;&nbsp;&nbsp; 
+                <a href="addition.html">Addition</a>&nbsp;&nbsp;&nbsp;
+                <a href="subtract.html">Subtraction</a>&nbsp;&nbsp;&nbsp;
+                <a href="multiply.html">Multiplication</a>&nbsp;&nbsp;&nbsp;
+                <a href="division.html">Division</a>&nbsp;&nbsp;&nbsp;
+            </p>
+        </div>
+        <hr>
+		<div class="content">
+			Learn Division
+			<hr>
+			<p style = "font-size:20pt; font-family: Raleway;">Learn one of the most important part of Maths to divide your worries.</p>
+			<input class="start-button" type="button"  value="Start" onClick="location.href='divisionq-logged-in.html'">
+		</div>
+    </body>
+</html>

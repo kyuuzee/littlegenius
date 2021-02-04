@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>Account/My profile</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Open+Sans|Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet"  type="text/css" href="skeleton.css" >
+        
+        <style type = "text/css">
+            
+            .user-account {
+                margin-top: 18%;
+                padding-left: 15%;
+                color: #576E7A;
+                font-family: raleway;
+                font-size: 130%;
+            }
+            
+            .quote{
+                padding-left: 40%;
+                padding-right: 10%;
+                font-size: 100%;
+                font-family: raleway;
+            }
+        </style>
+    
+        
+    </head>
+    
+    <body>
+       <div class="top">
+            <div class="login-name">
+                &nbsp;&nbsp;&nbsp;
+                <?php echo $_COOKIE["username"]; ?> 
+                &nbsp;&nbsp;&nbsp;
+                <input class="login-button" type= "button" value= "Log Out" onClick="window.location = 'logout.php'">
+            </div>
+           
+        </div>
+        <div class="navbar">
+            <img src="logo3.jpg" height=90 alt="little genius">
+            <p class="navigation">
+                <a href="account.html">My Profile</a>&nbsp;&nbsp;&nbsp; 
+                <a href="addition.html">Addition</a>&nbsp;&nbsp;&nbsp;
+                <a href="subtract.html">Subtraction</a>&nbsp;&nbsp;&nbsp;
+                <a href="multiply.html">Multiplication</a>&nbsp;&nbsp;&nbsp;
+                <a href="division.html">Division</a>&nbsp;&nbsp;&nbsp;
+            </p> 
+        </div>
+        <div class="user-account">
+            <table>
+                <tr>
+                    <td>
+                        Username : 
+
+                        <?php echo $_COOKIE["username"]; ?> 
+
+                        <br><br><br>Email : 
+
+                        <?php echo $_COOKIE["email"]; ?>
+
+                        <br><br><br>Progress : 
+
+                        <!-- calculate progress based on how many chapters completed -->
+                        <?php $count=0;
+                        if ($_COOKIE["addition"]==1) {
+                            $count++;
+                        }
+                        if ($_COOKIE["subtraction"]==1) {
+                            $count++;
+                        }
+                        if ($_COOKIE["multiplication"]==1) {
+                            $count++;
+                        }
+                        if ($_COOKIE["division"]==1) {
+                            $count++;
+                        }
+
+                        $percent = ($count/4)*100;
+                        echo $percent."%"; ?>
+
+                        <br><br><br>Completed :<br>
+
+                        <!-- list all the completed chapters -->
+                        <?php $count=0;
+                        if ($_COOKIE["addition"]==1) {
+                            echo "&nbsp;&nbsp;&nbsp;&nbsp;- Addition<br>";
+                        }
+                        if ($_COOKIE["subtraction"]==1) {
+                            echo "&nbsp;&nbsp;&nbsp;&nbsp;- Subtraction<br>";
+                        }
+                        if ($_COOKIE["multiplication"]==1) {
+                            echo "&nbsp;&nbsp;&nbsp;&nbsp;- Multiplication<br>";
+                        }
+                        if ($_COOKIE["division"]==1) {
+                            echo "&nbsp;&nbsp;&nbsp;&nbsp;- Division<br>";
+                        } ?>
+                    </td>
+                    <td class="quote">
+                        <hr>Quote of the day<hr><br>
+                        “There are no shortcuts to any place worth going.” – Beverly Sills.<br><br>
+                        "Success is the sum of small efforts, repeated day in and day out. – Robert Collier"
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<!--if cookie is not set go to default page-->
+<?php
+    if(!isset($_COOKIE['username']))
+         header('Location: subtractq.html');?>
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>Subtraction questions for logged in user</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Open+Sans|Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet"  type="text/css" href="skeleton.css" >
+        
+		<script type="text/javascript">
+
+		function check(){
+				Question=document.Question;
+				checkanswer1=Question.answer1.value;
+				checkanswer2=Question.answer2.value;
+				checkanswer3=Question.answer3.value;
+				checkanswer4=Question.answer4.value;
+				checkanswer5=Question.answer5.value;
+				if (checkanswer1 == "1"){
+					document.getElementById("question1").style.backgroundColor = "lightgreen";
+					checkanswer1 = true;}
+				else {
+					document.getElementById("question1").style.backgroundColor = "crimson";
+					document.getElementById("question1").style.color = "black";
+					checkanswer1 = false;}
+				if (checkanswer2 == "2"){
+					document.getElementById("question2").style.backgroundColor = "lightgreen";
+					checkanswer2 = true;}
+				else {
+					document.getElementById("question2").style.backgroundColor = "crimson";
+					document.getElementById("question2").style.color = "black";
+					checkanswer2 = false;}
+				if (checkanswer3 == "3"){
+					document.getElementById("question3").style.backgroundColor = "lightgreen";
+					checkanswer3 = true;}
+				else {
+					document.getElementById("question3").style.backgroundColor = "crimson";
+					document.getElementById("question3").style.color = "black";
+					checkanswer3 = false;}
+				if (checkanswer4 == "12"){
+					document.getElementById("question4").style.backgroundColor = "lightgreen";
+					checkanswer4 = true;}
+				else {
+					document.getElementById("question4").style.backgroundColor = "crimson";
+					document.getElementById("question4").style.color = "black";
+					checkanswer4 = false;}
+				if (checkanswer5 == "13"){
+					document.getElementById("question5").style.backgroundColor = "lightgreen";
+					checkanswer5 = true;}
+				else {
+					document.getElementById("question5").style.backgroundColor = "crimson";
+					document.getElementById("question5").style.color = "black";
+					checkanswer5 = false;}
+				if (checkanswer1 && checkanswer2 && checkanswer3 && checkanswer4 && checkanswer5 == true){
+					alert("Congratulations you have got all questions correct!!!!!!")
+					window.open("progress-sub.html");}
+				else {
+					alert("There are still some wrong answers. Don't give up!")}
+				
+				
+		}
+    </script>
+              
+    </head>
+    
+    <body>
+        <div class="top">
+            <div class="login-name">
+                &nbsp;&nbsp;&nbsp;
+                <?php echo $_COOKIE["username"]; ?> 
+                &nbsp;&nbsp;&nbsp;
+                <input class="login-button" type= "button" value= "Log Out" onClick="window.location = 'logout.php'">
+            </div>
+        </div>
+        <div class="navbar">
+            <img src="logo3.jpg" height=90 alt="little genius">
+            <p class="navigation">
+                <a href="account.html">My Profile</a>&nbsp;&nbsp;&nbsp; 
+                <a href="addition.html">Addition</a>&nbsp;&nbsp;&nbsp;
+                <a href="subtract.html">Subtraction</a>&nbsp;&nbsp;&nbsp;
+                <a href="multiply.html">Multiplication</a>&nbsp;&nbsp;&nbsp;
+                <a href="division.html">Division</a>&nbsp;&nbsp;&nbsp;
+            </p>
+        </div>
+        <hr>
+		<div class="content-question">
+			<p style = "font-size:25pt; font-family: Raleway;">Before we start, let's watch a quick video to understand subtraction.</p>
+			<br>
+			<iframe width="560" height="315" 
+			src="https://www.youtube.com/embed/depLStKzbIE" frameborder="0" 
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+			picture-in-picture" allowfullscreen>
+			</iframe>
+			<p style = "font-size:20pt; font-family: Raleway;color: #576E7A;padding-top: 2%; padding-bottom: 2%">&nbsp;&nbsp; Once you finish the video, let's try some simple questions.</p>
+		</div>
+		<hr>
+		<form name="Question">
+			<div class="questions" id="question1">
+				<p>Question 1</p>
+				<br>
+				<p style = "font-size:15pt;">Zack has 2 apple. He gave his best friend, Mark one of the apples. How many apple does he have now.</p>
+				<br>
+				<p style = "font-size:90pt;"><img src="apple.jpg" height=100 alt="apple"> <img src="apple.jpg" height=100 alt="apple"> - <img src="apple.jpg" height=100 alt="apple"> = ? </p>
+				<br>
+				<input type = "radio" name = "answer1" value = "1">1&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer1" value = "2">2&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer1" value = "0">0&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer1" value = "4">4<br>
+			</div>
+			<div class="questions" id="question2">
+				<p>Question 2</p>
+				<br>
+				<p style = "font-size:15pt;">Zack has 5 apples. While studying, he eaten 3 of the apples. How many apple does he have now.</p>
+				<br>
+				<p style = "font-size:90pt;"><img src="apple.jpg" height=100 alt="apple"> <img src="apple.jpg" height=100 alt="apple"> <img src="apple.jpg" height=100 alt="apple"> <img src="apple.jpg" height=100 alt="apple"> <img src="apple.jpg" height=100 alt="apple"> - <img src="apple.jpg" height=100 alt="apple"> <img src="apple.jpg" height=100 alt="apple"> <img src="apple.jpg" height=100 alt="apple"> = ? </p>
+				<br>
+				<input type = "radio" name = "answer2" value = "5">5&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer2" value = "2">2&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer2" value = "8">8&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer2" value = "7">7<br>
+			</div>
+			<div class="questions" id="question3">
+				<p>Question 3</p>
+				<br>
+				<p style = "font-size:25pt;">8 - 5 = ?</p>
+				<br>			
+				<input type = "radio" name = "answer3" value = "13">13&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer3" value = "10">10&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer3" value = "2">2&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer3" value = "3">3
+				<br>
+				<br>
+				<p style = "font-size:15pt; font-style:italic; font-weight:light;">Hint: If you are having troubles just imagine the numbers as apples.</p>
+			</div>
+			<div class="questions" id="question4">
+				<p>Question 4</p>
+				<br>
+				<p style = "font-size:25pt;">25 - 13 = ?</p>
+				<br>			
+				<input type = "radio" name = "answer4" value = "12">12&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer4" value = "17">17&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer4" value = "7">7&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer4" value = "2">2
+				<br>
+				<br>
+				<p style = "font-size:15pt; font-style:italic; font-weight:light;">Hint: To solve big number, break them down into smaller number first.
+				Example: 34 can be broken down into 3 and 4 and 12 can be broken down to 1 and 2. Then minus them according to their position. 34 - 12 will be
+				3 - 1 = 2 and 4 - 2 = 2. Then combine them to get the answer 22.</p>
+			</div>
+			<div class="questions" id="question5">
+				<p>Question 5</p>
+				<br>
+				<p style = "font-size:25pt;">57 - 44 = ?</p>
+				<br>			
+				<input type = "radio" name = "answer5" value = "13">13&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer5" value = "3">3&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer5" value = "43">43&nbsp;&nbsp;&nbsp;
+				<input type = "radio" name = "answer5" value = "53">53
+			</div>
+			<input class="submit" type = "button" name="submit" value="Submit" onclick="check()">
+		</form>
+    </body>
+</html>
